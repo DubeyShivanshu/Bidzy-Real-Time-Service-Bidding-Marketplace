@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bidzy — On-Demand Service Marketplace. Get competitive bids for any home service instantly." />
+    <title>Bidzy</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  </head>
+  <style>
+    /* Pre-React Loading Animation */
+    #root-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f9fafb; /* matches tailwind gray-50 */
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #e5e7eb; /* gray-200 */
+      border-top: 4px solid #000; /* black */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 16px;
+    }
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #111827; /* gray-900 */
+      letter-spacing: -0.025em;
+    }
+    .brand span {
+      color: #000; /* black */
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <body>
+    <div id="root">
+      <!-- This loader displays instantly, preventing a blank white screen while React downloads/mounts -->
+      <div id="root-loader">
+        <div class="spinner"></div>
+        <div class="brand"><span>Bidzy</span> Loading...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
