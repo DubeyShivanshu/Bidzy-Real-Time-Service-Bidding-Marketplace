@@ -5,8 +5,9 @@
 import React, { useState } from 'react';
 import useAuthStore from '../../store/auth/authStore.js';
 import * as customerAuthService from '../../services/auth/customerAuth.service.js';
+import * as avatarService from '../../services/auth/avatar.service.js';
 import toast from 'react-hot-toast';
-import { User, Mail, MapPin, Phone, Edit2, Save, X } from 'lucide-react';
+import { User, Mail, MapPin, Phone, Edit2, Save, X, Camera, Trash2 } from 'lucide-react';
 
 const CustomerProfile = () => {
   const { user, updateUser } = useAuthStore();
@@ -17,6 +18,8 @@ const CustomerProfile = () => {
     city: user?.city || '',
   });
   const [loading, setLoading] = useState(false);
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const fileInputRef = React.useRef(null);
 
   if (!user) return null;
 
@@ -34,15 +37,80 @@ const CustomerProfile = () => {
     }
   };
 
+  const handleAvatarUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.uploadAvatar('customer', file);
+      updateUser(res.data.data.user);
+      toast.success('Profile picture updated!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to upload image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
+  const handleAvatarDelete = async () => {
+    if (!window.confirm('Are you sure you want to remove your profile picture?')) return;
+    
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.deleteAvatar('customer');
+      updateUser(res.data.data.user);
+      toast.success('Profile picture removed!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to remove image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden">
         <div className="bg-green-600 h-32"></div>
         <div className="px-8 pb-8">
-          <div className="-mt-12 mb-6">
-            <div className="h-24 w-24 bg-white rounded-2xl p-2 shadow-sm border border-gray-100 flex items-center justify-center text-green-700 font-black text-4xl">
-              {user.name.charAt(0).toUpperCase()}
+          <div className="-mt-12 mb-6 flex items-end gap-4">
+            <div className="relative group">
+              <div className={`h-24 w-24 bg-white rounded-2xl p-1 shadow-sm border border-gray-100 flex items-center justify-center text-green-700 font-black text-4xl overflow-hidden ${avatarLoading ? 'opacity-50' : ''}`}>
+                {user?.avatar ? (
+                  <img src={user.avatar} alt="Profile" className="w-full h-full object-cover rounded-xl" />
+                ) : (
+                  user.name.charAt(0).toUpperCase()
+                )}
+              </div>
+              
+              {/* Hover Overlay */}
+              <div 
+                className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center cursor-pointer"
+                onClick={() => fileInputRef.current?.click()}
+              >
+                <Camera className="h-6 w-6 text-white mb-1" />
+                <span className="text-[10px] text-white font-bold">Change</span>
+              </div>
+
+              <input 
+                type="file" 
+                ref={fileInputRef} 
+                onChange={handleAvatarUpload} 
+                accept="image/*" 
+                className="hidden" 
+              />
             </div>
+
+            {user?.avatar && (
+              <button 
+                onClick={handleAvatarDelete}
+                disabled={avatarLoading}
+                className="mb-2 p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition"
+                title="Remove Picture"
+              >
+                <Trash2 className="h-4 w-4" />
+              </button>
+            )}
           </div>
           
           <div className="flex justify-between items-start">

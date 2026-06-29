@@ -47,6 +47,9 @@ export const register = async (req, res, next) => {
       speciality: user.speciality,
       role: user.role,
       verified: user.verified,
+      rating: user.rating,
+      totalReviews: user.totalReviews,
+      avatar: user.avatar,
     };
 
     return successResponse(
@@ -93,6 +96,9 @@ export const login = async (req, res, next) => {
       speciality: user.speciality,
       role: user.role,
       verified: user.verified,
+      rating: user.rating,
+      totalReviews: user.totalReviews,
+      avatar: user.avatar,
     };
 
     return successResponse(res, { user: userResponse, token }, 'Logged in successfully');
@@ -140,6 +146,9 @@ export const updateProfile = async (req, res, next) => {
       bio: user.bio,
       role: user.role,
       verified: user.verified,
+      rating: user.rating,
+      totalReviews: user.totalReviews,
+      avatar: user.avatar,
     };
 
     return successResponse(res, { user: userResponse }, 'Profile updated successfully');

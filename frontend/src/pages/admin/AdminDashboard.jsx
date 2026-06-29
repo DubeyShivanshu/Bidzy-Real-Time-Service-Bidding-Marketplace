@@ -2,12 +2,14 @@
  * pages/admin/AdminDashboard.jsx — Admin Live Metrics Dashboard
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import * as adminService from '../../services/admin/admin.service.js';
+import * as avatarService from '../../services/auth/avatar.service.js';
+import useAuthStore from '../../store/auth/authStore.js';
 import Spinner from '../../components/common/Spinner.jsx';
 import { 
   Users, Briefcase, CheckSquare, AlertTriangle, ShieldCheck, 
-  Banknote, Wallet, XCircle, Clock, Activity, AlertCircle 
+  Banknote, Wallet, XCircle, Clock, Activity, AlertCircle, Camera, Trash2 
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -28,8 +30,11 @@ const MetricCard = ({ title, value, icon: Icon, color, subtext }) => (
 );
 
 const AdminDashboard = () => {
+  const { user, updateUser } = useAuthStore();
   const [metrics, setMetrics] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const fileInputRef = useRef(null);
 
   const fetchMetrics = async () => {
     try {
@@ -49,6 +54,37 @@ const AdminDashboard = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleAvatarUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.uploadAvatar('admin', file);
+      updateUser(res.data.data.user);
+      toast.success('Admin profile picture updated!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to upload image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
+  const handleAvatarDelete = async () => {
+    if (!window.confirm('Are you sure you want to remove your profile picture?')) return;
+    
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.deleteAvatar('admin');
+      updateUser(res.data.data.user);
+      toast.success('Admin profile picture removed!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to remove image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
   if (loading && !metrics) {
     return <div className="flex min-h-[60vh] items-center justify-center"><Spinner size="lg" /></div>;
   }
@@ -57,6 +93,52 @@ const AdminDashboard = () => {
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 space-y-8 font-sans">
+      
+      {/* Admin Profile Section */}
+      <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm flex items-center gap-6">
+        <div className="relative group flex-shrink-0">
+          <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center shadow-sm overflow-hidden ${avatarLoading ? 'opacity-50' : ''}`}>
+            {user?.avatar ? (
+              <img src={user.avatar} alt="Admin" className="w-full h-full object-cover" />
+            ) : (
+              <span className="text-xl font-black text-white">{user?.name?.charAt(0).toUpperCase()}</span>
+            )}
+          </div>
+
+          <div 
+            className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center cursor-pointer"
+            onClick={() => fileInputRef.current?.click()}
+          >
+            <Camera className="h-5 w-5 text-white mb-0.5" />
+            <span className="text-[9px] text-white font-bold">Change</span>
+          </div>
+
+          <input 
+            type="file" 
+            ref={fileInputRef} 
+            onChange={handleAvatarUpload} 
+            accept="image/*" 
+            className="hidden" 
+          />
+
+          {user?.avatar && (
+            <button 
+              onClick={handleAvatarDelete}
+              disabled={avatarLoading}
+              className="absolute -bottom-2 -right-2 p-1 bg-white border border-gray-200 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg shadow-sm transition"
+              title="Remove Picture"
+            >
+              <Trash2 className="h-3 w-3" />
+            </button>
+          )}
+        </div>
+        
+        <div>
+          <h2 className="text-xl font-black text-gray-900">{user?.name}</h2>
+          <p className="text-sm font-bold text-green-600 uppercase tracking-wider">Super Administrator</p>
+        </div>
+      </div>
+
       <div className="flex justify-between items-end">
         <div>
           <h1 className="text-2xl font-black text-gray-900 tracking-tight">System Overview</h1>

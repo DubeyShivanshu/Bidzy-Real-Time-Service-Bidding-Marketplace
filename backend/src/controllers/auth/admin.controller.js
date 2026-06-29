@@ -39,6 +39,7 @@ export const login = async (req, res, next) => {
       name: user.name,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     };
 
     return successResponse(res, { user: userResponse, token }, 'Admin logged in successfully');

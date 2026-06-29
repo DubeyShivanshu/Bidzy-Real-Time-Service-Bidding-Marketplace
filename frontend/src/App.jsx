@@ -39,6 +39,9 @@ const App = () => {
         }
       };
 
+      // Instantly sync wallet balance on login/page-load to populate Navbar
+      handleWalletUpdate();
+
       socket.on('wallet:update', handleWalletUpdate);
     } else {
       disconnectSocket();

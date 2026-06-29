@@ -9,13 +9,14 @@
  */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ShieldCheck, MapPin, Star, AlertCircle, Edit2, Briefcase, Phone, Save, X } from 'lucide-react';
+import { ShieldCheck, MapPin, Star, AlertCircle, Edit2, Briefcase, Phone, Save, X, Camera, Trash2 } from 'lucide-react';
 import * as providerService from '../../services/providers/provider.service.js';
 import * as providerAuthService from '../../services/auth/providerAuth.service.js';
 import useAuthStore from '../../store/auth/authStore.js';
 import toast from 'react-hot-toast';
 import Spinner from '../../components/common/Spinner.jsx';
 import ReviewCard from '../../components/booking/ReviewCard.jsx';
+import * as avatarService from '../../services/auth/avatar.service.js';
 
 const ProviderProfile = () => {
   const { id } = useParams();
@@ -40,6 +41,8 @@ const ProviderProfile = () => {
     bio: '',
   });
   const [saveLoading, setSaveLoading] = useState(false);
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const fileInputRef = React.useRef(null);
 
   useEffect(() => {
     if (!targetId) {
@@ -114,6 +117,39 @@ const ProviderProfile = () => {
     }
   };
 
+  const handleAvatarUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.uploadAvatar('provider', file);
+      updateUser(res.data.data.user);
+      setProvider(prev => ({ ...prev, avatar: res.data.data.user.avatar }));
+      toast.success('Profile picture updated!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to upload image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
+  const handleAvatarDelete = async () => {
+    if (!window.confirm('Are you sure you want to remove your profile picture?')) return;
+    
+    setAvatarLoading(true);
+    try {
+      const res = await avatarService.deleteAvatar('provider');
+      updateUser(res.data.data.user);
+      setProvider(prev => ({ ...prev, avatar: null }));
+      toast.success('Profile picture removed!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to remove image');
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto py-10 px-4 sm:px-6 space-y-8 font-sans">
       
@@ -125,8 +161,45 @@ const ProviderProfile = () => {
         <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           
           {/* Avatar */}
-          <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center flex-shrink-0 shadow-md">
-            <span className="text-3xl font-black text-white">{initials}</span>
+          <div className="relative group flex-shrink-0">
+            <div className={`h-24 w-24 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center shadow-md overflow-hidden ${avatarLoading ? 'opacity-50' : ''}`}>
+              {provider.avatar ? (
+                <img src={provider.avatar} alt="Profile" className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-3xl font-black text-white">{initials}</span>
+              )}
+            </div>
+
+            {isOwnProfile && (
+              <>
+                <div 
+                  className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center cursor-pointer"
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  <Camera className="h-6 w-6 text-white mb-1" />
+                  <span className="text-[10px] text-white font-bold">Change</span>
+                </div>
+
+                <input 
+                  type="file" 
+                  ref={fileInputRef} 
+                  onChange={handleAvatarUpload} 
+                  accept="image/*" 
+                  className="hidden" 
+                />
+
+                {provider.avatar && (
+                  <button 
+                    onClick={handleAvatarDelete}
+                    disabled={avatarLoading}
+                    className="absolute -bottom-2 -right-2 p-1.5 bg-white border border-gray-200 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg shadow-sm transition"
+                    title="Remove Picture"
+                  >
+                    <Trash2 className="h-3.5 w-3.5" />
+                  </button>
+                )}
+              </>
+            )}
           </div>
 
           <div className="flex-1 min-w-0">

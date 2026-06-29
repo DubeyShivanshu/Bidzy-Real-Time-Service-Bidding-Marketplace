@@ -42,7 +42,7 @@ export const ProviderWallet = () => {
   };
 
   const handleWithdraw = () => {
-    toast('Withdrawal feature is coming soon!', { icon: '🚧' });
+    toast('Withdrawal functionality will be available soon!', { icon: '🚧' });
   };
 
   if (loading) {

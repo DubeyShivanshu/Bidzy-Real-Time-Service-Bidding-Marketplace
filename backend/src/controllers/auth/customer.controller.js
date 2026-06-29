@@ -48,6 +48,7 @@ export const register = async (req, res, next) => {
       role: user.role,
       walletBalance: user.walletBalance,
       verified: user.verified,
+      avatar: user.avatar,
     };
 
     return successResponse(
@@ -94,6 +95,7 @@ export const login = async (req, res, next) => {
       role: user.role,
       walletBalance: user.walletBalance,
       verified: user.verified,
+      avatar: user.avatar,
     };
 
     return successResponse(res, { user: userResponse, token }, 'Logged in successfully');
@@ -117,6 +119,7 @@ export const googleCallback = async (req, res, next) => {
       role: req.user.role,
       walletBalance: req.user.walletBalance,
       verified: req.user.verified,
+      avatar: req.user.avatar,
     };
 
     // Redirect to frontend with token and user data in query string
@@ -166,6 +169,7 @@ export const updateProfile = async (req, res, next) => {
       role: user.role,
       walletBalance: user.walletBalance,
       verified: user.verified,
+      avatar: user.avatar,
     };
 
     return successResponse(res, { user: userResponse }, 'Profile updated successfully');

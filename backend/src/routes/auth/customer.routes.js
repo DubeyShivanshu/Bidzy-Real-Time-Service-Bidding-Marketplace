@@ -13,7 +13,9 @@
 import { Router } from 'express';
 import passport from 'passport';
 import * as customerController from '../../controllers/auth/customer.controller.js';
+import * as avatarController from '../../controllers/auth/avatar.controller.js';
 import { protect } from '../../middleware/auth.js';
+import { upload } from '../../middleware/upload.js';
 import { authorize } from '../../middleware/role.js';
 import { authLimiter } from '../../middleware/rateLimiter.js';
 
@@ -47,5 +49,8 @@ router.get('/google/callback', (req, res, next) => {
 router.post('/logout', protect, authorize('customer'), customerController.logout);
 router.get('/me', protect, authorize('customer'), customerController.getMe);
 router.put('/me', protect, authorize('customer'), customerController.updateProfile);
+
+router.post('/avatar', protect, authorize('customer'), upload.single('avatar'), avatarController.uploadAvatar);
+router.delete('/avatar', protect, authorize('customer'), avatarController.deleteAvatar);
 
 export default router;

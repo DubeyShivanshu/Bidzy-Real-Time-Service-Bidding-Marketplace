@@ -110,8 +110,15 @@ export const Navbar = () => {
             )}
 
             {/* User Profile Info & Logout */}
-            <div className="flex items-center gap-2 border-l border-gray-150 pl-4">
-              <div className="text-right">
+            <div className="flex items-center gap-3 border-l border-gray-150 pl-4">
+              {user?.avatar ? (
+                <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full object-cover shadow-sm border border-gray-200" />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-black text-sm">
+                  {user?.name?.charAt(0).toUpperCase()}
+                </div>
+              )}
+              <div className="text-right mr-1">
                 <p className="text-xs font-bold text-gray-950">{user?.name}</p>
                 <p className="text-[10px] text-gray-400 font-semibold capitalize">{user?.role}</p>
               </div>

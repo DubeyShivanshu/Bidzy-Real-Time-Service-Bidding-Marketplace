@@ -12,7 +12,9 @@
 
 import { Router } from 'express';
 import * as providerController from '../../controllers/auth/provider.controller.js';
+import * as avatarController from '../../controllers/auth/avatar.controller.js';
 import { protect } from '../../middleware/auth.js';
+import { upload } from '../../middleware/upload.js';
 import { authorize } from '../../middleware/role.js';
 import { authLimiter } from '../../middleware/rateLimiter.js';
 
@@ -23,5 +25,8 @@ router.post('/login', authLimiter, providerController.login);
 router.post('/logout', protect, authorize('provider'), providerController.logout);
 router.get('/me', protect, authorize('provider'), providerController.getMe);
 router.put('/me', protect, authorize('provider'), providerController.updateProfile);
+
+router.post('/avatar', protect, authorize('provider'), upload.single('avatar'), avatarController.uploadAvatar);
+router.delete('/avatar', protect, authorize('provider'), avatarController.deleteAvatar);
 
 export default router;
