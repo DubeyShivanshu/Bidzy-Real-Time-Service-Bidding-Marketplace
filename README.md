@@ -254,4 +254,4 @@ Admin credentials are automatically generated upon database connection if no adm
 ---
 
 ## 🛡️ License
-Distributed under the MIT License. See `LICENSE` for more information.
+[MIT](./LICENSE)
