@@ -21,18 +21,6 @@ export const ProviderBidding = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchJobDetails = async () => {
-      try {
-        const response = await jobService.getJobById(id);
-        setJob(response.data.data);
-      } catch (err) {
-        console.error(err);
-        setError('Failed to load job details.');
-      } finally {
-        setLoading(false);
-      }
-    };
   const fetchJobDetails = async () => {
     try {
       const response = await jobService.getJobById(id);
