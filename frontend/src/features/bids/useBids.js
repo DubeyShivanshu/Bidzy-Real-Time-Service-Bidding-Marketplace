@@ -1,6 +1,4 @@
 /**
- * features/bids/useBids.js
- *
  * Responsibilities:
  *  - Fetch bids for a specific job
  *  - Handle customer accept/reject actions via bidService

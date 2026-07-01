@@ -1,5 +1,5 @@
 /**
- * routes/providers/provider.routes.js — Provider Profile Routes
+ * Provider Profile Routes
  *
  * Routes:
  *  GET    /:id               — Get public provider profile (Auth: any role)

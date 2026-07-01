@@ -1,5 +1,5 @@
 /**
- * store/provider/providerStore.js — Provider Zustand Store
+ * Provider Zustand Store
  *
  * Shape:
  *  {

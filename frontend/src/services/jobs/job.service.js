@@ -1,5 +1,5 @@
 /**
- * services/jobs/job.service.js — Job API Calls
+ * Job API Calls
  *
  * Responsibilities:
  *  - createJob(data) → POST /jobs

@@ -1,5 +1,5 @@
 /**
- * components/wallet/RazorpayButton.jsx — Razorpay Checkout Trigger
+ * Razorpay Checkout Trigger
  *
  * Props: orderId, amount, onSuccess, onFailure
  * Loads Razorpay checkout.js script and opens payment dialog

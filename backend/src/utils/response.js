@@ -1,5 +1,5 @@
 /**
- * utils/response.js — Standardized API Response Helpers
+ * Standardized API Response Helpers
  *
  * Responsibilities:
  *  - successResponse(res, data, message, statusCode) — Send 200/201 success envelope

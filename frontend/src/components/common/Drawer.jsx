@@ -1,5 +1,5 @@
 /**
- * components/common/Drawer.jsx — Slide-in Side Drawer
+ * Slide-in Side Drawer
  *
  * Props: isOpen, onClose, title, children, side ('left'|'right'), width
  * Used for mobile sidebar, filter panels, and form drawers

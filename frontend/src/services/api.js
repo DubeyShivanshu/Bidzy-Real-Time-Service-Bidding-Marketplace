@@ -1,5 +1,5 @@
 /**
- * services/api.js — Axios Instance with Interceptors
+ * Axios Instance with Interceptors
  *
  * Responsibilities:
  *  - Create configured Axios instance with VITE_API_BASE_URL

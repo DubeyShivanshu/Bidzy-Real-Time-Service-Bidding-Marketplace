@@ -1,5 +1,5 @@
 /**
- * components/bidding/LiveBidCounter.jsx — Animated Bid Count Badge
+ * Animated Bid Count Badge
  *
  * Props: count
  * Animates when count changes (new bid received)

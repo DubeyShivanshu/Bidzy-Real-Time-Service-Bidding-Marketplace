@@ -1,6 +1,4 @@
 /**
- * features/admin/useAdminUsers.js
- *
  * Responsibilities:
  *  - Admin user management hooks
  */

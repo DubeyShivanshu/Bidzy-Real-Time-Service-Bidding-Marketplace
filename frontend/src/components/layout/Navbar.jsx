@@ -1,5 +1,5 @@
 /**
- * components/layout/Navbar.jsx — Top Navigation Bar
+ * Top Navigation Bar
  *
  * Responsibilities:
  *  - Display Bidzy logo/brand

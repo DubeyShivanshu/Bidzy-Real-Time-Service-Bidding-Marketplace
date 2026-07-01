@@ -1,5 +1,5 @@
 /**
- * controllers/auth/avatar.controller.js — Avatar Upload Controller
+ * Avatar Upload Controller
  *
  * Responsibilities:
  *  - uploadAvatar: Upload image to Cloudinary and update User avatar field
@@ -73,7 +73,6 @@ export const deleteAvatar = async (req, res, next) => {
     }
 
     // Extract public_id from secure_url
-    // Example: https://res.cloudinary.com/.../image/upload/v1234/bidzy/avatars/abcde.png
     const urlParts = user.avatar.split('/');
     const folderAndFile = urlParts.slice(-2).join('/'); // 'bidzy/avatars/abcde.png'
     const publicId = folderAndFile.split('.')[0]; // 'bidzy/avatars/abcde'

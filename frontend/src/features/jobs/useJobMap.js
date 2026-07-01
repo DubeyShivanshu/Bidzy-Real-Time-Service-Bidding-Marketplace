@@ -1,6 +1,4 @@
 /**
- * features/jobs/useJobMap.js
- *
  * Responsibilities:
  *  - Leaflet map orchestration for PostJob (customer coordinates selection)
  *  - Coordinates to address Nominatim service linkage

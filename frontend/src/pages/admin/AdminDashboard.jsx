@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminDashboard.jsx — Admin Live Metrics Dashboard
+ * Admin Live Metrics Dashboard
  */
 
 import React, { useState, useEffect, useRef } from 'react';

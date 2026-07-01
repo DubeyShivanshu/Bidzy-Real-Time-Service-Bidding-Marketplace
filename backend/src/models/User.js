@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      // Not required — Google OAuth users may not have a password
+      // Not required
     },
     role: {
       type: String,
@@ -58,7 +58,7 @@ const userSchema = new mongoose.Schema(
       default: false,
     },
     speciality: {
-      // Provider only — e.g. "Electrician", "Plumber"
+      // Provider only
       type: String,
       trim: true,
     },

@@ -1,5 +1,5 @@
 /**
- * components/bidding/CountdownTimer.jsx — Job Expiry Countdown
+ * Job Expiry Countdown
  *
  * Props: expiresAt (ISO date string)
  * Counts down to 0, then displays "Expired"

@@ -1,5 +1,5 @@
 /**
- * routes/bids/bid.routes.js — Bid Routes
+ * Bid Routes
  *
  * Routes:
  *  POST   /              — Submit a bid on a job (Provider only)

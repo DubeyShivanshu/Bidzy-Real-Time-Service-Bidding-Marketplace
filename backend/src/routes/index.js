@@ -1,5 +1,5 @@
 /**
- * routes/index.js — Master API Router
+ * Master API Router
  *
  * Responsibilities:
  *  - Mount all feature routers under their respective prefixes

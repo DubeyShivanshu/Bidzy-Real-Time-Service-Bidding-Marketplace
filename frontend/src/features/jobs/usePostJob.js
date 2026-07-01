@@ -1,6 +1,4 @@
 /**
- * features/jobs/usePostJob.js
- *
  * Responsibilities:
  *  - Orchestrates job creation (PostJob page)
  *  - Submits to job.service.js → createJob

@@ -1,6 +1,4 @@
 /**
- * features/auth/useCustomerAuth.js
- *
  * Responsibilities:
  *  - Orchestrates customer authentication flows
  *  - Calls customerAuth.service.js

@@ -1,5 +1,5 @@
 /**
- * store/bids/bidStore.js — Bids Zustand Store
+ * Bids Zustand Store
  *
  * Responsibilities:
  *  - Store bids for the currently viewed job

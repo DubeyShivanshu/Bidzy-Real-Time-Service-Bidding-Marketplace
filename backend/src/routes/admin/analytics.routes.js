@@ -1,10 +1,5 @@
 /**
- * routes/admin/analytics.routes.js — Admin Analytics Routes
- *
- * Routes:
- *  GET    /revenue     — Revenue breakdown (daily/weekly/monthly)
- *                        Returns: platform fees, top-ups, refunds, escrow balance
- *  GET    /overview    — High-level platform growth stats
+ * Admin Analytics Routes
  */
 
 import { Router } from 'express';

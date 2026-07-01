@@ -1,5 +1,5 @@
 /**
- * middleware/jobUpload.js — Multer Configuration for Job Posts
+ * Multer Configuration for Job Posts
  */
 import multer from 'multer';
 

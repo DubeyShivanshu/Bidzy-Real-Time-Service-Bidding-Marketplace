@@ -1,5 +1,5 @@
 /**
- * components/wallet/WalletCard.jsx — Wallet Balance Display
+ * Wallet Balance Display
  *
  * Props: balance, onTopUp
  * Shows formatted balance + Top Up button

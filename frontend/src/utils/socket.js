@@ -1,5 +1,5 @@
 /**
- * utils/socket.js — Socket.io Client Singleton
+ * Socket.io Client Singleton
  *
  * Responsibilities:
  *  - Create a single Socket.io client instance

@@ -1,6 +1,4 @@
 /**
- * pages/provider/ProviderDashboard.jsx
- *
  * Responsibilities:
  *  - Real-time job feed (displays open local jobs)
  *  - Display rating, earnings summary

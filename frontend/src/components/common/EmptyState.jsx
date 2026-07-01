@@ -1,5 +1,5 @@
 /**
- * components/common/EmptyState.jsx — Empty List Placeholder
+ * Empty List Placeholder
  *
  * Props: icon, title, description, action (optional CTA button)
  */

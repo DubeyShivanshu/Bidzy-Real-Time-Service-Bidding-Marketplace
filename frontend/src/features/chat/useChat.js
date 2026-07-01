@@ -1,6 +1,4 @@
 /**
- * features/chat/useChat.js
- *
  * Responsibilities:
  *  - REST-based chat loading stubs
  */

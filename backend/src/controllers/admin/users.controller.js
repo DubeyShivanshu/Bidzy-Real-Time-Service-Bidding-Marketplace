@@ -1,5 +1,5 @@
 /**
- * controllers/admin/users.controller.js — Admin User Management Controller
+ * Admin User Management Controller
  *
  * Responsibilities:
  *  - getAllUsers: Paginated list with role filter, search by name/email

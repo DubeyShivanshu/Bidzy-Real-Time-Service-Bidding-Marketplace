@@ -1,5 +1,5 @@
 /**
- * services/reviews/review.service.js — Review API Service
+ * Review API Service
  *
  * Axios connectors to review endpoints:
  *  POST /api/reviews                          — submitReview

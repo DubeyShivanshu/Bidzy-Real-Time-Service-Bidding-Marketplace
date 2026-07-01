@@ -1,6 +1,4 @@
 /**
- * features/wallet/useWallet.js
- *
  * Responsibilities:
  *  - Balance retrieval
  *  - Paginated transaction history queries

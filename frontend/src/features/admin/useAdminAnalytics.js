@@ -1,7 +1,3 @@
-/**
- * features/admin/useAdminAnalytics.js
- */
-
 import { useState } from 'react';
 import * as adminService from '@services/admin/admin.service.js';
 

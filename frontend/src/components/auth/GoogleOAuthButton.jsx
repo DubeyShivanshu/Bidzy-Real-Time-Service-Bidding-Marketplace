@@ -1,5 +1,5 @@
 /**
- * components/auth/GoogleOAuthButton.jsx — Google OAuth Login Button
+ * Google OAuth Login Button
  *
  * Responsibilities:
  *  - "Continue with Google" styled button (Google brand guidelines)

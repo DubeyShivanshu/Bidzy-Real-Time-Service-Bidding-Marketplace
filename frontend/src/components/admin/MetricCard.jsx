@@ -1,5 +1,5 @@
 /**
- * components/admin/MetricCard.jsx — Admin Dashboard Metric Card
+ * Admin Dashboard Metric Card
  *
  * Props: title, value, subtext, color, icon
  */

@@ -1,5 +1,5 @@
 /**
- * pages/public/Register.jsx — Unified Register Page
+ * Unified Register Page
  *
  * Responsibilities:
  *  - Role selector: Customer | Provider

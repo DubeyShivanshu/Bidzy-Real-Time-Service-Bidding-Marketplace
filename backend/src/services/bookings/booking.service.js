@@ -1,5 +1,5 @@
 /**
- * services/bookings/booking.service.js — Booking Service
+ * Booking Service
  *
  * Responsibilities:
  *  - createBooking(jobId, bidId, customerId, providerId, basePrice) — Orchestrate booking creation:

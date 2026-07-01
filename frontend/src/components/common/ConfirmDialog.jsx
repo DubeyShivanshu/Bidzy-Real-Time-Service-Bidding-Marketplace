@@ -1,5 +1,5 @@
 /**
- * components/common/ConfirmDialog.jsx — Confirmation Modal
+ * Confirmation Modal
  *
  * Props: isOpen, onClose, onConfirm, title, message, confirmLabel, danger
  */

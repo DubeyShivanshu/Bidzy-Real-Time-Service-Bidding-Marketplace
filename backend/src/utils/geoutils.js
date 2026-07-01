@@ -1,5 +1,5 @@
 /**
- * utils/geoutils.js — Geographic Utility Functions
+ * Geographic Utility Functions
  *
  * Responsibilities:
  *  - buildGeoQuery(lat, lng, radiusKm) — Build MongoDB $near geo query for job feeds

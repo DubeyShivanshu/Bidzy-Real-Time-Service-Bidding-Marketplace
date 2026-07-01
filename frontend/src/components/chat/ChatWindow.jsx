@@ -1,5 +1,5 @@
 /**
- * components/chat/ChatWindow.jsx — Full Chat Interface
+ * Full Chat Interface
  *
  * Props:
  *   bookingId     {string}  — the booking this chat belongs to
@@ -32,7 +32,7 @@ const ChatWindow = ({ bookingId, counterparty = 'Other party', disabled = false 
   const [loading, setLoading] = useState(true);
   const [socketError, setSocketError] = useState(false);
 
-  // -- Combined socket + history setup on bookingId change ---------------
+  // Combined socket + history setup on bookingId change 
   useEffect(() => {
     if (!bookingId) return;
 
@@ -54,10 +54,10 @@ const ChatWindow = ({ bookingId, counterparty = 'Other party', disabled = false 
     }
     setSocketError(false);
 
-    // 1. Join the chat room
+    // Join the chat room
     socket.emit('chat:join', { bookingId });
 
-    // 2. Wire up event handlers
+    // Wire up event handlers
     const handleMessage = (newMsg) => addMessage(newMsg);
     const handleTyping = ({ userId: uid, isTyping }) => {
       const myId = useAuthStore.getState().user?._id?.toString();
@@ -66,7 +66,7 @@ const ChatWindow = ({ bookingId, counterparty = 'Other party', disabled = false 
     socket.on('chat:message', handleMessage);
     socket.on('chat:typing', handleTyping);
 
-    // 3. Load history from REST (after joining room so no messages are missed)
+    // Load history from REST (after joining room so no messages are missed)
     getChatHistory(bookingId)
       .then((res) => setMessages(res.data?.data || []))
       .catch((err) => console.error('[ChatWindow] History load failed:', err))

@@ -1,5 +1,5 @@
 /**
- * components/common/Card.jsx — Surface Card Component
+ * Surface Card Component
  *
  * Props: children, className, hover (boolean — adds hover shadow), onClick
  */

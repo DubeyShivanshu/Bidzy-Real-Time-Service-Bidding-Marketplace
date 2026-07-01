@@ -1,5 +1,5 @@
 /**
- * models/Bid.js — Bid Model
+ * Bid Model
  *
  * Responsibilities:
  *  - Represents a provider's bid on a customer job

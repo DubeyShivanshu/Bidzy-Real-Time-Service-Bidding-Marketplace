@@ -1,5 +1,5 @@
 /**
- * controllers/reviews/review.controller.js — Review Controller
+ * Review Controller
  *
  * Responsibilities:
  *  - submitReview: Validate booking is complete + customer owns it + no duplicate → create Review

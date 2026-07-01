@@ -1,5 +1,5 @@
 /**
- * store/wallet/walletStore.js — Wallet Zustand Store
+ * Wallet Zustand Store
  *
  * State:
  *  - walletBalance: number

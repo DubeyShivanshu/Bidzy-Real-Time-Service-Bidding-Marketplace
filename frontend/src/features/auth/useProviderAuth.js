@@ -1,6 +1,4 @@
 /**
- * features/auth/useProviderAuth.js
- *
  * Responsibilities:
  *  - Orchestrates provider auth flows
  *  - Calls providerAuth.service.js

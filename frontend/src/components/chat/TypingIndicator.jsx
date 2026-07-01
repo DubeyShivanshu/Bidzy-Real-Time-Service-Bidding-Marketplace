@@ -1,5 +1,5 @@
 /**
- * components/chat/TypingIndicator.jsx — "X is typing..." Indicator
+ * "X is typing..." Indicator
  *
  * Props: name
  * Animated 3-dot indicator shown when other participant is typing

@@ -1,5 +1,5 @@
 /**
- * routes/admin/disputes.routes.js — Admin Dispute Management Routes
+ * Admin Dispute Management Routes
  *
  * Routes:
  *  GET    /           — List all disputes (filterable by status)

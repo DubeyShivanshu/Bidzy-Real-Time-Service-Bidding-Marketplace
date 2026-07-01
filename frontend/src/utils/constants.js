@@ -1,5 +1,5 @@
 /**
- * utils/constants.js — Frontend Shared Constants
+ * Frontend Shared Constants
  *
  * Responsibilities:
  *  - Service categories list for job posting / filtering

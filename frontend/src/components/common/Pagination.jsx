@@ -1,5 +1,5 @@
 /**
- * components/common/Pagination.jsx — Pagination Controls
+ * Pagination Controls
  *
  * Props: page, totalPages, onPageChange
  */

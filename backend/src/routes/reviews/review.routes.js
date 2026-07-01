@@ -1,5 +1,5 @@
 /**
- * routes/reviews/review.routes.js — Review Routes
+ * Review Routes
  *
  * Routes:
  *  POST   /                      — Submit a review (Customer — after booking completion)

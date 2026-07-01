@@ -1,5 +1,5 @@
 /**
- * services/auth/providerAuth.service.js — Provider Auth API Calls
+ * Provider Auth API Calls
  *
  * Responsibilities:
  *  - register(data) → POST /auth/provider/register

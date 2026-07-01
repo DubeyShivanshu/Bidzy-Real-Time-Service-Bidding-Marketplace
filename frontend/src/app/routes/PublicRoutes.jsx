@@ -1,5 +1,5 @@
 /**
- * app/routes/PublicRoutes.jsx — Public Route Definitions
+ * Public Route Definitions
  *
  * Routes (accessible without authentication):
  *  /              → Landing.jsx

@@ -1,5 +1,5 @@
 /**
- * routes/admin/providers.routes.js — Admin Provider Management Routes
+ * Admin Provider Management Routes
  *
  * Routes:
  *  GET    /                   — List all providers (with verification status filter)

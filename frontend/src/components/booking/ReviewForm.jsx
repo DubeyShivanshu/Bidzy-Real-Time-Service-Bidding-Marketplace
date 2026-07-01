@@ -1,5 +1,5 @@
 /**
- * components/booking/ReviewForm.jsx — Star Rating + Feedback Form
+ * Star Rating + Feedback Form
  *
  * Props:
  *   bookingId   {string}   — booking being reviewed
@@ -18,7 +18,7 @@ import { Star, CheckCircle, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import * as reviewService from '../../services/reviews/review.service.js';
 
-// ── Star Rating Selector ──────────────────────────────────────────────────
+// Star Rating Selector 
 const StarSelector = ({ value, onChange, disabled }) => {
   const [hovered, setHovered] = useState(0);
 
@@ -57,7 +57,7 @@ const StarSelector = ({ value, onChange, disabled }) => {
   );
 };
 
-// ── Static Star Display (read-only) ──────────────────────────────────────
+// Static Star Display
 export const StarDisplay = ({ rating, size = 'sm' }) => {
   const sizes = { sm: 'h-3.5 w-3.5', md: 'h-5 w-5', lg: 'h-6 w-6' };
   return (
@@ -76,7 +76,7 @@ export const StarDisplay = ({ rating, size = 'sm' }) => {
   );
 };
 
-// ── Main ReviewForm Component ─────────────────────────────────────────────
+// Main ReviewForm Component
 const ReviewForm = ({ bookingId, providerName = 'the provider', onSubmitted }) => {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState('');

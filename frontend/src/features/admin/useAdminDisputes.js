@@ -1,6 +1,4 @@
 /**
- * features/admin/useAdminDisputes.js
- *
  * Responsibilities:
  *  - Admin dispute queue query + resolve
  */

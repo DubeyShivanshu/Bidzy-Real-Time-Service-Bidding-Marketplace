@@ -1,6 +1,4 @@
 /**
- * features/admin/useAdminDashboard.js
- *
  * Responsibilities:
  *  - Admin dashboard live metrics fetcher
  */

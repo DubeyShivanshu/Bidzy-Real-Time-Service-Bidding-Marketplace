@@ -1,5 +1,5 @@
 /**
- * services/wallet/escrow.service.js — Escrow Service
+ * Escrow Service
  *
  * Responsibilities:
  *  - holdEscrow(bookingId, session) — Debit totalAmount from customer wallet on booking creation
@@ -48,7 +48,7 @@ export const releaseEscrow = async (bookingId, session = null) => {
   const booking = await Booking.findById(bookingId).session(session);
   if (!booking) throw new Error('Booking not found for escrow release');
 
-  // 1. Credit basePrice to provider
+  // Credit basePrice to provider
   await creditWallet(
     booking.providerId,
     booking.basePrice,
@@ -57,7 +57,7 @@ export const releaseEscrow = async (bookingId, session = null) => {
     session
   );
 
-  // 2. Return security deposit to customer
+  // Return security deposit to customer
   await creditWallet(
     booking.customerId,
     booking.securityDeposit,
@@ -66,7 +66,7 @@ export const releaseEscrow = async (bookingId, session = null) => {
     session
   );
 
-  // 3. Platform keeps platformFee (credit to admin wallet)
+  // Platform keeps platformFee (credit to admin wallet)
   console.log(`[Escrow] Attempting to credit platformFee: ${booking.platformFee}`);
   const admin = await User.findOne({ role: 'admin' }).session(session);
   console.log(`[Escrow] Admin user found: ${admin ? admin._id : 'null'}`);
@@ -84,7 +84,7 @@ export const releaseEscrow = async (bookingId, session = null) => {
     console.log(`[Escrow] Did NOT credit Admin. Admin found: ${!!admin}, Fee: ${booking.platformFee}`);
   }
 
-  // 4. Update booking escrow status
+  // Update booking escrow status
   booking.escrowStatus = ESCROW_STATUS.RELEASED;
   await booking.save({ session });
 

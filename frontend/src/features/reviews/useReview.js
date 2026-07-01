@@ -1,6 +1,4 @@
 /**
- * features/reviews/useReview.js
- *
  * Responsibilities:
  *  - Submit reviews for bookings
  *  - Fetch review list for specific provider

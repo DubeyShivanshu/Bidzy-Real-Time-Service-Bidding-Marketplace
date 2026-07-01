@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminBookings.jsx — Admin Bookings Management
+ * Admin Bookings Management
  */
 
 import React, { useState, useEffect } from 'react';

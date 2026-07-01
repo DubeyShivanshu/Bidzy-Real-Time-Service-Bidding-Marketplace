@@ -1,5 +1,5 @@
 /**
- * controllers/bids/bid.controller.js — Bid Controller
+ * Bid Controller
  *
  * Responsibilities:
  *  - submitBid: Validate, create Bid with provider snapshot, emit bid:new to job room

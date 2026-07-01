@@ -1,5 +1,5 @@
 /**
- * routes/admin/users.routes.js — Admin User Management Routes
+ * Admin User Management Routes
  *
  * Routes:
  *  GET    /          — List all users (paginated, filterable by role)

@@ -1,5 +1,5 @@
 /**
- * components/bidding/BidList.jsx — Live Bid List with Socket Updates
+ * Live Bid List with Socket Updates
  *
  * Props: jobId, isCustomer
  * Reads from bidStore — updated in real-time via bid:new socket events
@@ -42,7 +42,6 @@ export const BidList = ({ jobId, isCustomer }) => {
   const handleAccept = async (bidId) => {
     try {
       await acceptProviderBid(bidId);
-      // Wait: acceptProviderBid updates job and emits events
     } catch (err) {
       // Handled by hook error/toast
     }

@@ -1,5 +1,5 @@
 /**
- * models/Transaction.js — Wallet Transaction Model
+ * Wallet Transaction Model
  *
  * Responsibilities:
  *  - Immutable ledger of all wallet movements for any user

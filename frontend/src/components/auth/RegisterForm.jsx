@@ -1,5 +1,5 @@
 /**
- * components/auth/RegisterForm.jsx — Reusable Register Form
+ * Reusable Register Form
  *
  * Props: role ('customer'|'provider'), onSuccess
  * Fields: name, email, phone, city, speciality (provider), password

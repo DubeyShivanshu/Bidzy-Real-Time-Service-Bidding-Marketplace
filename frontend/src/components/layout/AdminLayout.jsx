@@ -1,5 +1,5 @@
 /**
- * components/layout/AdminLayout.jsx — Admin App Shell
+ * Admin App Shell
  *
  * Responsibilities:
  *  - Navbar with admin nav items

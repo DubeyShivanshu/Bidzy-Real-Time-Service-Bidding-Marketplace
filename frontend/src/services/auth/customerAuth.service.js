@@ -1,5 +1,5 @@
 /**
- * services/auth/customerAuth.service.js — Customer Auth API Calls
+ * Customer Auth API Calls
  *
  * Responsibilities:
  *  - register(data) → POST /auth/customer/register

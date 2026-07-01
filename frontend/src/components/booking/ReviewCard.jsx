@@ -1,5 +1,5 @@
 /**
- * components/booking/ReviewCard.jsx — Single Review Display Card
+ * Single Review Display Card
  *
  * Props:
  *   review {object} — Review with populated customerId and optional bookingId

@@ -1,5 +1,5 @@
 /**
- * components/admin/DisputeCard.jsx — Dispute Summary Card
+ * Dispute Summary Card
  *
  * Props: dispute, onView
  */

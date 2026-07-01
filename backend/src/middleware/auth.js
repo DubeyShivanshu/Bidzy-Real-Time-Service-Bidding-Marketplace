@@ -1,5 +1,5 @@
 /**
- * middleware/auth.js — JWT Authentication Middleware
+ * JWT Authentication Middleware
  *
  * Responsibilities:
  *  - Extract Bearer token from Authorization header

@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminAnalytics.jsx — Admin Analytics & Growth Dashboard
+ * Admin Analytics & Growth Dashboard
  */
 
 import React, { useState, useEffect } from 'react';

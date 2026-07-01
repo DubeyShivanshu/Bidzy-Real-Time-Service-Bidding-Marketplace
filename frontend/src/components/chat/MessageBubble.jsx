@@ -1,5 +1,5 @@
 /**
- * components/chat/MessageBubble.jsx — Chat Message Bubble
+ * Chat Message Bubble
  *
  * Props: message (ChatMessage), isOwn (boolean)
  * Shows sender name, message text, time, read receipt

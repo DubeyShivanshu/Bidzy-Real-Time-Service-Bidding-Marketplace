@@ -1,5 +1,5 @@
 /**
- * components/booking/BookingStatusBadge.jsx — Booking Status Badge
+ * Booking Status Badge
  *
  * Props: status ('active'|'completed'|'cancelled')
  */

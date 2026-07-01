@@ -1,5 +1,5 @@
 /**
- * middleware/errorHandler.js — Global Express Error Handler
+ * Global Express Error Handler
  *
  * Responsibilities:
  *  - Catches all errors passed via next(err)

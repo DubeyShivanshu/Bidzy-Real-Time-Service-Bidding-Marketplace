@@ -1,5 +1,5 @@
 /**
- * components/provider/ProviderCard.jsx — Provider Summary Card
+ * Provider Summary Card
  *
  * Props: provider (User object), distance, showBidButton, onBid
  */

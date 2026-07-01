@@ -1,5 +1,5 @@
 /**
- * services/disputes/dispute.service.js — Dispute API Calls
+ * Dispute API Calls
  */
 
 import api from '../api.js';

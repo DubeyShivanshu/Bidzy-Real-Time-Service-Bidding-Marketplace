@@ -1,5 +1,5 @@
 /**
- * pages/public/NotFound.jsx — 404 Page
+ * 404 Page
  */
 import React from 'react';
 const NotFound = () => null;

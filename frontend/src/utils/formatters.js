@@ -1,12 +1,12 @@
 /**
- * utils/formatters.js — Formatting Utility Functions
+ * Formatting Utility Functions
  *
  * Responsibilities:
  *  - formatCurrency(amount) — Format as Indian Rupees: ₹1,000
  *  - formatDate(date) — Human-readable date: "Jun 22, 2026"
  *  - formatTimeAgo(date) — Relative time: "2 hours ago"
  *  - formatDistance(km) — "1.2 km away"
- *  - formatRating(rating) — "4.5 ⭐"
+ *  - formatRating(rating) — "4.5"
  */
 
 /**

@@ -1,5 +1,5 @@
 /**
- * components/bidding/BidSubmitForm.jsx — Bid Submission Form
+ * Bid Submission Form
  *
  * Props: jobId, onSuccess
  * Fields: price, message, eta

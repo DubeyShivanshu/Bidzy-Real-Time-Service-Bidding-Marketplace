@@ -1,5 +1,5 @@
 /**
- * components/admin/VerificationReview.jsx — Provider Document Review Panel
+ * Provider Document Review Panel
  *
  * Props: verification, onApprove, onReject
  * Shows: uploaded documents, approve/reject buttons, note textarea

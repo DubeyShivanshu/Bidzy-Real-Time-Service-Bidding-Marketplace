@@ -1,5 +1,5 @@
 /**
- * controllers/jobs/job.controller.js — Job Controller
+ * Job Controller
  *
  * Responsibilities:
  *  - createJob: Validate, create Job, emit job:new via Socket.io to all providers

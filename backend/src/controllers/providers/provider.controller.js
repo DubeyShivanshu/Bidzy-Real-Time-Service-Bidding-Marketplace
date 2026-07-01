@@ -1,5 +1,5 @@
 /**
- * controllers/providers/provider.controller.js — Provider Profile Controller
+ * Provider Profile Controller
  *
  * Responsibilities:
  *  - getProviderProfile: Public profile with reviews (rating, totalReviews, verified badge)

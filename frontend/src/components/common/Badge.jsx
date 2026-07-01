@@ -1,5 +1,5 @@
 /**
- * components/common/Badge.jsx — Status Badge Component
+ * Status Badge Component
  *
  * Props: label, color ('green'|'gray'|'red'|'amber'), icon?
  * Uses Tailwind badge-* classes from index.css

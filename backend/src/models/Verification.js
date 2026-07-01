@@ -1,5 +1,5 @@
 /**
- * models/Verification.js — Provider Verification Request Model
+ * Provider Verification Request Model
  *
  * Responsibilities:
  *  - Stores document upload URLs for provider KYC verification

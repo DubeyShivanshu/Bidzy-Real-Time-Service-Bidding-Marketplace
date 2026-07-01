@@ -1,5 +1,5 @@
 /**
- * store/chat/chatStore.js — Chat Zustand Store
+ * Chat Zustand Store
  *
  * Responsibilities:
  *  - Store messages for active chat room

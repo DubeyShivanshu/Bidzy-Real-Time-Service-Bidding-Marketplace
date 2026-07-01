@@ -1,5 +1,5 @@
 /**
- * middleware/rateLimiter.js — Rate Limiting Configuration
+ * Rate Limiting Configuration
  *
  * Responsibilities:
  *  - Prevent brute force attacks on auth endpoints

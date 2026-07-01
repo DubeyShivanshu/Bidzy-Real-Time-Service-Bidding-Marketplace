@@ -1,5 +1,5 @@
 /**
- * utils/jwt.js — JWT Utility Functions
+ * JWT Utility Functions
  *
  * Responsibilities:
  *  - generateToken(userId, role) — Sign JWT with userId + role payload

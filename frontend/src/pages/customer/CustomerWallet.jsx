@@ -92,7 +92,7 @@ export const CustomerWallet = () => {
       const { orderId, isMock, keyId } = orderRes.data.data;
 
       if (isMock) {
-        // ─── Mock Mode (no Razorpay keys set) ───────────────────────────
+        // Mock Mode (no Razorpay keys set)
         const verifyRes = await walletService.verifyPayment({
           orderId,
           paymentId: `mock_pay_${Date.now()}`,
@@ -106,7 +106,7 @@ export const CustomerWallet = () => {
         return;
       }
 
-      // ─── Live Razorpay checkout ──────────────────────────────────────
+      // Live Razorpay checkout
       const scriptLoaded = await loadRazorpayScript();
       if (!scriptLoaded) {
         toast.error('Failed to load Razorpay. Check your internet connection.');

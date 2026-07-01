@@ -1,13 +1,7 @@
 /**
- * hooks/useDebounce.js — Debounce Hook
- *
  * Responsibilities:
  *  - Debounce a value by delaying updates until after delay ms of inactivity
  *  - Used for search inputs, filter changes that trigger API calls
- *
- * @param {any} value
- * @param {number} delay — milliseconds
- * @returns {any} debouncedValue
  */
 
 import { useState, useEffect } from 'react';

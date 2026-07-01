@@ -1,6 +1,4 @@
 /**
- * features/wallet/useRazorpay.js
- *
  * Responsibilities:
  *  - Initialize Razorpay Order via backend api
  *  - Load Razorpay SDK and open dialog

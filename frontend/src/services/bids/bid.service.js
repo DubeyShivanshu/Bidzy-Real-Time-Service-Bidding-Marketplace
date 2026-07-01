@@ -1,5 +1,5 @@
 /**
- * services/bids/bid.service.js — Bid API Calls
+ * Bid API Calls
  *
  * Responsibilities:
  *  - submitBid(data) → POST /bids

@@ -1,6 +1,4 @@
 /**
- * features/disputes/useDispute.js
- *
  * Responsibilities:
  *  - File dispute on bookings
  *  - Fetch user's active/historical disputes

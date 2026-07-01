@@ -1,5 +1,5 @@
 /**
- * components/booking/BookingCard.jsx — Booking Summary Card
+ * Booking Summary Card
  *
  * Props: booking, role ('customer'|'provider')
  * Shows: job service, counterparty name, status badge, amount, date

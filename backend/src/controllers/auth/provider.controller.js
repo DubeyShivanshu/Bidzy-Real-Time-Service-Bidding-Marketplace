@@ -1,5 +1,5 @@
 /**
- * controllers/auth/provider.controller.js — Provider Auth Controller
+ * Provider Auth Controller
  *
  * Responsibilities:
  *  - register: Validate input, hash password, create User (role=provider), return JWT

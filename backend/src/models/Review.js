@@ -1,5 +1,5 @@
 /**
- * models/Review.js — Review Model
+ * Review Model
  *
  * Responsibilities:
  *  - Customer submits a review after booking completion

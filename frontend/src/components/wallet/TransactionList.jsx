@@ -1,5 +1,5 @@
 /**
- * components/wallet/TransactionList.jsx — Transaction History
+ * Transaction History
  *
  * Props: transactions
  * Shows type badge, amount, description, date for each transaction

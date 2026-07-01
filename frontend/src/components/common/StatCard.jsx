@@ -1,5 +1,5 @@
 /**
- * components/common/StatCard.jsx — Dashboard Metric Card
+ * Dashboard Metric Card
  *
  * Props: title, value, icon, trend ('up'|'down'), color
  * Used in AdminDashboard and customer/provider dashboards

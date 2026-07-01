@@ -1,13 +1,10 @@
 /**
- * config/constants.js — Application-Wide Constants
- *
  * Responsibilities:
  *  - Define role enum values
  *  - Define job/booking/bid status enums
  *  - Define transaction type enums
  *  - Define dispute status enums
  *  - Define verification status enums
- *  - Business rule defaults (loaded from env in service layer)
  */
 
 export const ROLES = Object.freeze({

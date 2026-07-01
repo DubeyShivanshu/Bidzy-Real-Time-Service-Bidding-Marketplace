@@ -1,5 +1,5 @@
 /**
- * services/bookings/booking.service.js — Booking API Service
+ * Booking API Service
  *
  * Axios connectors to booking endpoints:
  *  GET  /api/bookings/customer/my    — getCustomerBookings

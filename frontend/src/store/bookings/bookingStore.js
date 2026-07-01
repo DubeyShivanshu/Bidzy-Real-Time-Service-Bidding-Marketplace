@@ -1,5 +1,5 @@
 /**
- * store/bookings/bookingStore.js — Booking Zustand Store
+ * Booking Zustand Store
  *
  * State:
  *  - bookings: Booking[]

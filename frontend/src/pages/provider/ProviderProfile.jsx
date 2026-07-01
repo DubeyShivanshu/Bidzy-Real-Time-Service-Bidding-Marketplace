@@ -1,8 +1,8 @@
 /**
- * pages/provider/ProviderProfile.jsx — Provider Public Profile
+ * Provider Public Profile
  *
  * Responsibilities:
- *  - Display name, speciality, city, rating (⭐), totalReviews
+ *  - Display name, speciality, city, rating, totalReviews
  *  - Verified badge if verified
  *  - Review list
  *  - Edit profile link (if viewing own profile)

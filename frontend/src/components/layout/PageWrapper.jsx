@@ -1,5 +1,5 @@
 /**
- * components/layout/PageWrapper.jsx — Page Content Wrapper
+ * Page Content Wrapper
  *
  * Props: title, subtitle, children
  * Applies max-width container, page header, and content padding

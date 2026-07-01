@@ -1,6 +1,4 @@
 /**
- * features/providers/useVerification.js
- *
  * Responsibilities:
  *  - KYCDocument submit
  *  - Fetch verification status

@@ -1,6 +1,4 @@
 /**
- * features/bids/useBidSubmit.js
- *
  * Responsibilities:
  *  - Orchestrates provider bid submission
  *  - API submit + socket emit

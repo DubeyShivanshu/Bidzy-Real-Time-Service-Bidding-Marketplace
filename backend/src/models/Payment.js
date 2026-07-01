@@ -1,5 +1,5 @@
 /**
- * models/Payment.js — Razorpay Payment Record Model
+ * Razorpay Payment Record Model
  *
  * Responsibilities:
  *  - Records every Razorpay payment attempt for wallet top-up

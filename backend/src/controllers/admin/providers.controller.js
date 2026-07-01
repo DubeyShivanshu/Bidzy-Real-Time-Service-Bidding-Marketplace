@@ -1,5 +1,5 @@
 /**
- * controllers/admin/providers.controller.js — Admin Provider Management Controller
+ * Admin Provider Management Controller
  *
  * Responsibilities:
  *  - getAllProviders: Paginated list with verification status filter

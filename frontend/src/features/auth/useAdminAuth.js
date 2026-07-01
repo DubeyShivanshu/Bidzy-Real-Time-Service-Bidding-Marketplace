@@ -1,6 +1,4 @@
 /**
- * features/auth/useAdminAuth.js
- *
  * Responsibilities:
  *  - Orchestrates admin auth flows
  *  - Calls adminAuth.service.js

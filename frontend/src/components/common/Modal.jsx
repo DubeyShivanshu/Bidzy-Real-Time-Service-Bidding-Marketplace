@@ -1,5 +1,5 @@
 /**
- * components/common/Modal.jsx — Reusable Modal Component
+ * Reusable Modal Component
  *
  * Props: isOpen, onClose, title, children, size ('sm'|'md'|'lg'|'xl')
  * Uses backdrop blur, escape key handler, focus trap

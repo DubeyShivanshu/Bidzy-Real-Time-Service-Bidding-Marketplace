@@ -1,5 +1,5 @@
 /**
- * services/providers/provider.service.js — Provider API Calls
+ * Provider API Calls
  *
  * Responsibilities:
  *  - getProviderProfile(id) → GET /providers/:id

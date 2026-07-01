@@ -1,5 +1,5 @@
 /**
- * services/chat/chat.service.js — Chat API Calls
+ * Chat API Calls
  *
  * Responsibilities:
  *  - getChatHistory(bookingId) → GET /chat/:bookingId/history

@@ -1,5 +1,5 @@
 /**
- * app.js — Express Application Factory
+ * Express Application Factory
  *
  * Responsibilities:
  *  - Create and configure Express app
@@ -21,7 +21,7 @@ import path from 'path';
 
 const app = express();
 
-// ── CORS ──────────────────────────────────────────────────────────────────────
+// CORS
 app.use(
   cors({
     origin: process.env.CLIENT_URL || 'http://localhost:5173',
@@ -30,7 +30,7 @@ app.use(
   })
 );
 
-// ── Body parsing ──────────────────────────────────────────────────────────────
+// Body parsing
 // Raw body needed for Razorpay webhook HMAC verification
 app.use('/api/wallet/webhook', express.raw({ type: 'application/json' }));
 app.use(express.json());
@@ -42,12 +42,12 @@ app.use('/uploads', (_req, res) => {
   res.status(404).send('File not found. This local file may have been deleted during the recent migration to Cloudinary.');
 });
 
-// ── Logger ────────────────────────────────────────────────────────────────────
+// Logger
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-// ── Session (required for Passport Google OAuth) ──────────────────────────────
+// Session (required for Passport Google OAuth)
 app.use(
   session({
     secret: process.env.SESSION_SECRET || 'bidzy_session_secret',
@@ -61,22 +61,22 @@ app.use(
   })
 );
 
-// ── Passport ──────────────────────────────────────────────────────────────────
+// Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// ── Health check ──────────────────────────────────────────────────────────────
+// Health check
 app.get('/health', (_req, res) => res.json({ status: 'ok', service: 'Bidzy API' }));
 
-// ── API Routes ────────────────────────────────────────────────────────────────
+// API Routes
 app.use('/api', router);
 
-// ── 404 fallback ──────────────────────────────────────────────────────────────
+// 404 fallback
 app.use((_req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
 });
 
-// ── Global error handler ──────────────────────────────────────────────────────
+// Global error handler
 app.use(errorHandler);
 
 export default app;

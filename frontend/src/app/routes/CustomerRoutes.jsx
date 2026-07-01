@@ -1,5 +1,5 @@
 /**
- * app/routes/CustomerRoutes.jsx — Customer Route Definitions
+ * Customer Route Definitions
  *
  * All routes require role=customer authentication (via ProtectedRoute).
  * Wrapped in CustomerLayout for consistent sidebar + navbar.

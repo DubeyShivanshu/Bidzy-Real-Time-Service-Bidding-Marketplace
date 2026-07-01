@@ -1,6 +1,5 @@
 /**
- * features/bookings/useBookingDetail.js
- *
+/**
  * Responsibilities:
  *  - Retrieve details for single booking
  *  - Handle cancellation, completion, escrow release logic

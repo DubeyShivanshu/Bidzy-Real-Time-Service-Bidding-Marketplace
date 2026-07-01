@@ -1,5 +1,5 @@
 /**
- * services/wallet/wallet.service.js — Wallet API Service
+ * Wallet API Service
  *
  * Axios connectors to wallet endpoints:
  *  GET  /api/wallet               — getWallet (balance)

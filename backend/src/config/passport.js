@@ -1,12 +1,8 @@
 /**
- * config/passport.js — Passport Google OAuth 2.0 Strategy
- *
  * Responsibilities:
  *  - Configure GoogleStrategy for CUSTOMER role ONLY
  *  - Find or create user in DB on successful OAuth
  *  - Serialize / deserialize user for session
- *
- * Note: Providers and Admins do NOT use Google OAuth.
  */
 
 import passport from 'passport';

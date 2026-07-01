@@ -1,5 +1,5 @@
 /**
- * controllers/auth/customer.controller.js — Customer Auth Controller
+ * Customer Auth Controller
  *
  * Responsibilities:
  *  - register: Validate input, hash password, create User (role=customer), return JWT

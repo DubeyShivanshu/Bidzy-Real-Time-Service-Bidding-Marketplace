@@ -1,5 +1,5 @@
 /**
- * components/booking/BookingDetail.jsx — Full Booking Detail View
+ * Full Booking Detail View
  *
  * Props: booking, role
  * Shows: job details, provider/customer info, payment breakdown, chat, action buttons

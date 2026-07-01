@@ -1,5 +1,5 @@
 /**
- * services/payments/razorpay.service.js — Razorpay Service
+ * Razorpay Service
  *
  * Responsibilities:
  *  - createOrder(amount, currency, receipt) — Create Razorpay order (returns orderId)

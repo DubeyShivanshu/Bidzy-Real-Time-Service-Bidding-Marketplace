@@ -1,5 +1,5 @@
 /**
- * routes/jobs/job.routes.js — Job Routes
+ * Job Routes
  *
  * Routes:
  *  POST   /              — Create a new job (Customer only)

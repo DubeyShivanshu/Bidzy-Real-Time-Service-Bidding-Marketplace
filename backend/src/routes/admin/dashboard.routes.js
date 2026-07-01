@@ -1,5 +1,5 @@
 /**
- * routes/admin/dashboard.routes.js — Admin Dashboard Routes
+ * Admin Dashboard Routes
  *
  * Routes:
  *  GET    /   — Platform-wide metrics dashboard (Admin only)

@@ -1,5 +1,5 @@
 /**
- * store/auth/authStore.js — Authentication Zustand Store
+ * Authentication Zustand Store
  *
  * Responsibilities:
  *  - Store: user object, JWT token, role, isAuthenticated flag
@@ -22,11 +22,6 @@
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-// TODO: Implement store with persist middleware
-// TODO: setAuth action — store user + token, set isAuthenticated = true
-// TODO: logout action — clear all state, remove token from axios headers
-// TODO: updateUser — partial update for profile changes or wallet balance sync
 
 const useAuthStore = create(
   persist(

@@ -1,5 +1,5 @@
 /**
- * middleware/role.js — Role-Based Access Control Middleware
+ * Role-Based Access Control Middleware
  *
  * Responsibilities:
  *  - Factory function that returns a middleware for a given set of allowed roles

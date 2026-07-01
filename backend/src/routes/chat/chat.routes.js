@@ -1,5 +1,5 @@
 /**
- * routes/chat/chat.routes.js — Chat Routes (REST)
+ * Chat Routes (REST)
  *
  * Routes:
  *  GET    /:bookingId/history  — Fetch message history for a booking's chat room

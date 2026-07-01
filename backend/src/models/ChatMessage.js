@@ -1,5 +1,5 @@
 /**
- * models/ChatMessage.js — Chat Message Model
+ * Chat Message Model
  *
  * Responsibilities:
  *  - Stores persistent chat messages for a booking's chat room

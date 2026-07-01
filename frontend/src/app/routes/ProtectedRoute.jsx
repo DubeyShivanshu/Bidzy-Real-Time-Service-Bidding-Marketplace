@@ -1,5 +1,5 @@
 /**
- * app/routes/ProtectedRoute.jsx — Route Guard Component
+ * Route Guard Component
  *
  * Responsibilities:
  *  - Read authentication state from authStore

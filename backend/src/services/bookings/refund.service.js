@@ -1,5 +1,5 @@
 /**
- * services/bookings/refund.service.js — Refund Policy Service
+ * Refund Policy Service
  *
  * Responsibilities:
  *  - calculateRefundPercent(bookingCreatedAt) — Apply time-based refund policy:

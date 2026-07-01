@@ -1,5 +1,5 @@
 /**
- * components/common/Table.jsx — Responsive Data Table
+ * Responsive Data Table
  *
  * Props: columns (array of {key, label, render?}), data (array), loading, emptyMessage
  */

@@ -1,5 +1,5 @@
 /**
- * models/Booking.js — Booking Model
+ * Booking Model
  *
  * Responsibilities:
  *  - Created when a customer accepts a bid

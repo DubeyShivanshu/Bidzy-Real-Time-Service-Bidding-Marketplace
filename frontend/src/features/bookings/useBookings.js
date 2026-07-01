@@ -1,6 +1,4 @@
 /**
- * features/bookings/useBookings.js
- *
  * Responsibilities:
  *  - Retrieve logged-in user's bookings list
  */

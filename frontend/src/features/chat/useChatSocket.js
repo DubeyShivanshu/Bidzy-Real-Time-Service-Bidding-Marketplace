@@ -1,6 +1,4 @@
 /**
- * features/chat/useChatSocket.js
- *
  * Responsibilities:
  *  - Socket connection for booking live chat
  *  - Emit typing indicator and message send

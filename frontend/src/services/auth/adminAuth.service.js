@@ -1,5 +1,5 @@
 /**
- * services/auth/adminAuth.service.js — Admin Auth API Calls
+ * Admin Auth API Calls
  *
  * Responsibilities:
  *  - login(data) → POST /auth/admin/login

@@ -1,5 +1,5 @@
 /**
- * app/routes/ProviderRoutes.jsx — Provider Route Definitions
+ * Provider Route Definitions
  *
  * All routes require role=provider authentication (via ProtectedRoute).
  * Wrapped in ProviderLayout for consistent sidebar + navbar.

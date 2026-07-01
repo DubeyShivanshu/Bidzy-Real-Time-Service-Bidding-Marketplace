@@ -1,5 +1,5 @@
 /**
- * services/admin/admin.service.js — Admin API Calls
+ * Admin API Calls
  *
  * Responsibilities:
  *  - getDashboardMetrics() → GET /admin/dashboard

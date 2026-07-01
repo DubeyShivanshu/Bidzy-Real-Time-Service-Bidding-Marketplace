@@ -8,7 +8,7 @@ import useJobMap from '../../features/jobs/useJobMap.js';
 import * as jobService from '../../services/jobs/job.service.js';
 import toast from 'react-hot-toast';
 
-// Fix for default Leaflet icon paths
+// default Leaflet icon paths
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',

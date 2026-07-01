@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminDisputes.jsx — Admin Disputes Management
+ * Admin Disputes Management
  */
 
 import React, { useState, useEffect } from 'react';

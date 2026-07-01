@@ -1,6 +1,4 @@
 /**
- * features/providers/useProvider.js
- *
  * Responsibilities:
  *  - Profile query, update profile
  */

@@ -1,5 +1,5 @@
 /**
- * controllers/bookings/booking.controller.js — Booking Controller
+ * Booking Controller
  *
  * Responsibilities:
  *  - getCustomerBookings: Paginated list for authenticated customer

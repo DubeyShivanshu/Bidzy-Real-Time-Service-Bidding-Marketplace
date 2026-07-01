@@ -1,6 +1,4 @@
 /**
- * features/jobs/useJobs.js
- *
  * Responsibilities:
  *  - Fetch open jobs and filter jobs
  *  - Sync jobStore state with API responses

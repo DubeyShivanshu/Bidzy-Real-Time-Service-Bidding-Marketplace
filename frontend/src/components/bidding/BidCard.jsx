@@ -1,5 +1,5 @@
 /**
- * components/bidding/BidCard.jsx — Individual Bid Display Card
+ * Individual Bid Display Card
  *
  * Props: bid (Bid object with providerSnapshot), onAccept, onReject, isCustomer
  * Shows: provider avatar, name, rating, price, message, eta, accept/reject buttons

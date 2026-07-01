@@ -1,5 +1,5 @@
 /**
- * store/admin/adminStore.js — Admin Zustand Store
+ * Admin Zustand Store
  *
  * Shape:
  *  {

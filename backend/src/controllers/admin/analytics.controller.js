@@ -1,6 +1,4 @@
-/**
- * controllers/admin/analytics.controller.js — Admin Analytics Controller
- */
+// Admin Analytics Controller
 
 import Booking from '../../models/Booking.js';
 import User from '../../models/User.js';
@@ -61,7 +59,7 @@ export const getPlatformOverview = async (req, res, next) => {
     const newJobs = await Job.countDocuments({ createdAt: { $gte: thirtyDaysAgo } });
     const newBookings = await Booking.countDocuments({ createdAt: { $gte: thirtyDaysAgo } });
 
-    // Let's get daily bookings for activity chart
+    // Get daily bookings for activity chart
     const activityData = await Booking.aggregate([
       { $match: { createdAt: { $gte: thirtyDaysAgo } } },
       {

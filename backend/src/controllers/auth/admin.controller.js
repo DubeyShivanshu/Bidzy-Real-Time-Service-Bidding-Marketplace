@@ -1,5 +1,5 @@
 /**
- * controllers/auth/admin.controller.js — Admin Auth Controller
+ * Admin Auth Controller
  *
  * Responsibilities:
  *  - login: Find admin by email, compare password, return JWT

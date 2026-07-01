@@ -1,5 +1,5 @@
 /**
- * sockets/bidding.socket.js — Real-Time Bidding Socket Handler
+ * Real-Time Bidding Socket Handler
  *
  * Responsibilities:
  *  - Handle all bidding-related Socket.io events
@@ -9,12 +9,12 @@
  *  - Notify all clients in job room on bid:accepted
  *
  * Events handled:
- *  Client → Server:
+ *  Client -> Server:
  *    room:join   { jobId }           — Provider joins job bidding room
  *    room:leave  { jobId }           — Provider leaves job bidding room
  *    bid:submit  { jobId, ...bid }   — Provider submits a bid (validates + saves via service)
  *
- *  Server → Client:
+ *  Server -> Client:
  *    job:new      fullJobObject      — Broadcast to all providers on job creation
  *    bid:new      fullBidObject      — Broadcast to job_<jobId> room
  *    bid:accepted { bidId, bookingId } — Broadcast to job_<jobId> room

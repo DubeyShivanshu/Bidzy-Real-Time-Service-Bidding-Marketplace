@@ -1,6 +1,4 @@
 /**
- * pages/customer/CustomerDashboard.jsx
- *
  * Responsibilities:
  *  - Elegant Hero Banner greeting the logged-in customer.
  *  - Quick stats: Wallet Balance (links to wallet) and Active Bookings count (links to bookings).

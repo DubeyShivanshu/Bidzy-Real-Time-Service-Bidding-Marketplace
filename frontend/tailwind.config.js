@@ -1,23 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-/**
- * tailwind.config.js — Bidzy Design System
- *
- * Design Reference: Trove marketplace
- * Theme: Light, minimal, card-heavy, professional marketplace
- *
- * Color Palette:
- *  Primary:     #16a34a (green-600) — CTAs, active states, accents
- *  Primary Light: #dcfce7 (green-100) — subtle backgrounds
- *  Surface:     #ffffff — cards, modals
- *  Background:  #f9fafb (gray-50) — page background
- *  Text:        #111827 (gray-900) — primary text
- *  Text Muted:  #6b7280 (gray-500) — secondary text
- *  Border:      #e5e7eb (gray-200) — card borders, dividers
- *  Danger:      #dc2626 (red-600) — errors, destructive actions
- *  Warning:     #d97706 (amber-600) — pending states
- */
-
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {

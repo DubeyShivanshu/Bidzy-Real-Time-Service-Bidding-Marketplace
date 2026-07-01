@@ -1,5 +1,5 @@
 /**
- * routes/auth/admin.routes.js — Admin Authentication Routes
+ * Admin Authentication Routes
  *
  * Routes:
  *  POST   /login   — Admin login → JWT (email + password)

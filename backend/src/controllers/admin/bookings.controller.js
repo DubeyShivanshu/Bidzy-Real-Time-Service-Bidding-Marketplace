@@ -1,5 +1,5 @@
 /**
- * controllers/admin/bookings.controller.js — Admin Booking Controller
+ * Admin Booking Controller
  *
  * Responsibilities:
  *  - getAllBookings: Paginated list filterable by status, customer, provider, date range

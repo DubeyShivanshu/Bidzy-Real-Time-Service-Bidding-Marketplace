@@ -1,5 +1,5 @@
 /**
- * controllers/wallet/wallet.controller.js — Wallet Controller
+ * Wallet Controller
  *
  * Responsibilities:
  *  - getWallet: Return authenticated user's current wallet balance
@@ -21,7 +21,7 @@ import { PAYMENT_STATUS, TRANSACTION_TYPES } from '../../config/constants.js';
 export const getWallet = async (req, res, next) => {
   try {
     if (req.user.role === 'admin') {
-      // Platform revenue is stored in the primary admin's wallet (or sum of all admins)
+      // Platform revenue is stored in the primary admin's wallet
       const admins = await User.find({ role: 'admin' }).select('walletBalance');
       const totalAdminBalance = admins.reduce((sum, admin) => sum + (admin.walletBalance || 0), 0);
       return successResponse(res, { walletBalance: totalAdminBalance });
@@ -67,7 +67,7 @@ export const getTransactions = async (req, res, next) => {
 export const createOrder = async (req, res, next) => {
   try {
     console.log('💳 createOrder req.body:', req.body);
-    const { amount } = req.body; // amount in INR (₹)
+    const { amount } = req.body; // amount in INR
     if (!amount || amount < 100) {
       return errorResponse(res, `Minimum top-up amount is ₹100. Received: ${amount}`, 400);
     }

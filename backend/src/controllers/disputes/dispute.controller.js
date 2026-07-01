@@ -1,5 +1,5 @@
 /**
- * controllers/disputes/dispute.controller.js — Dispute Controller
+ * Dispute Controller
  *
  * Responsibilities:
  *  - raiseDispute: Validate booking ownership, create Dispute record

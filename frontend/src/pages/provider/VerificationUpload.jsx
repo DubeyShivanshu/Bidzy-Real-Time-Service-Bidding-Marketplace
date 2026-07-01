@@ -1,5 +1,5 @@
 /**
- * pages/provider/VerificationUpload.jsx — Provider Verification Document Upload
+ * Provider Verification Document Upload
  *
  * Responsibilities:
  *  - Fetch current verification status from GET /providers/verification/status
@@ -18,7 +18,7 @@ import {
 import toast from 'react-hot-toast';
 import * as providerService from '../../services/providers/provider.service.js';
 
-// ── Status Badge ──────────────────────────────────────────────────────────
+// Status Badge
 const STATUS_CONFIG = {
   not_submitted: {
     label: 'Not Submitted',
@@ -54,7 +54,7 @@ const STATUS_CONFIG = {
   },
 };
 
-// ── File Picker Row ───────────────────────────────────────────────────────
+// File Picker Row
 const FilePicker = ({ id, label, required, accept, onChange, file, disabled }) => (
   <div className="space-y-1.5">
     <label htmlFor={id} className="block text-xs font-bold text-gray-600 uppercase tracking-wider">
@@ -86,7 +86,7 @@ const FilePicker = ({ id, label, required, accept, onChange, file, disabled }) =
   </div>
 );
 
-// ── Main Page ─────────────────────────────────────────────────────────────
+// Main Page
 const VerificationUpload = () => {
   const [status, setStatus] = useState(null);
   const [adminNote, setAdminNote] = useState('');

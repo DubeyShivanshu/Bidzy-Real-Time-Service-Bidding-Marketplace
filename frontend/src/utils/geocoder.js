@@ -1,5 +1,5 @@
 /**
- * utils/geocoder.js — OpenStreetMap Nominatim Reverse Geocoder
+ * OpenStreetMap Nominatim Reverse Geocoder
  *
  * Responsibilities:
  *  - reverseGeocode(lat, lng) — Call Nominatim API to get address from coordinates

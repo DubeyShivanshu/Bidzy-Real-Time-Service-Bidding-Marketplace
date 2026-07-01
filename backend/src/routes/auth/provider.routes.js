@@ -1,5 +1,5 @@
 /**
- * routes/auth/provider.routes.js — Provider Authentication Routes
+ * Provider Authentication Routes
  *
  * Routes:
  *  POST   /register  — Provider registration (name, email, phone, city, speciality, password)

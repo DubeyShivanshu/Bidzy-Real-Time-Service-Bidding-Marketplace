@@ -1,5 +1,5 @@
 /**
- * pages/shared/DisputesList.jsx — User's Disputes View
+ * User's Disputes View
  *
  * Responsibilities:
  *  - Fetch disputes raised by the current user (Customer or Provider)

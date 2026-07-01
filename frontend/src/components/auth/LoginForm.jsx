@@ -1,5 +1,5 @@
 /**
- * components/auth/LoginForm.jsx — Reusable Login Form
+ * Reusable Login Form
  *
  * Props: role ('customer'|'provider'|'admin'), onSuccess
  * Uses React Hook Form, calls appropriate auth service

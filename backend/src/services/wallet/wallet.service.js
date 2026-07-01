@@ -1,5 +1,5 @@
 /**
- * services/wallet/wallet.service.js — Wallet Service
+ * Wallet Service
  *
  * Responsibilities:
  *  - creditWallet(userId, amount, description, metadata) — Add funds + create Transaction

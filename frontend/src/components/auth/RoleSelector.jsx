@@ -1,5 +1,5 @@
 /**
- * components/auth/RoleSelector.jsx — Role Tab Selector
+ * Role Tab Selector
  *
  * Props: selectedRole, onChange, roles (array of available roles)
  * Tab UI for switching between Customer / Provider / Admin on login/register pages

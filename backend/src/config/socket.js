@@ -1,6 +1,4 @@
 /**
- * config/socket.js — Socket.io Server Factory
- *
  * Responsibilities:
  *  - Create Socket.io server attached to Node HTTP server
  *  - Configure CORS for Socket.io

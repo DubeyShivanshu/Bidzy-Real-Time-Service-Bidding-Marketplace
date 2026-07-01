@@ -1,5 +1,5 @@
 /**
- * components/common/Input.jsx — Reusable Input Component
+ * Reusable Input Component
  *
  * Props: label, name, type, placeholder, error, register (React Hook Form), ...rest
  * Uses Tailwind classes: input, input-error, label

@@ -1,5 +1,5 @@
 /**
- * components/provider/RatingStars.jsx — Star Rating Display
+ * Star Rating Display
  *
  * Props: rating (0-5), totalReviews, size ('sm'|'md'|'lg')
  */

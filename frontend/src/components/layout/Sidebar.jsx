@@ -1,5 +1,5 @@
 /**
- * components/layout/Sidebar.jsx — Side Navigation
+ * Side Navigation
  *
  * Props: role ('customer'|'provider'|'admin'), isOpen, onClose
  * Renders role-specific navigation links

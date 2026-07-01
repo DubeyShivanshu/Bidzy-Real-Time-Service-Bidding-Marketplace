@@ -1,7 +1,3 @@
-/**
- * pages/customer/CustomerProfile.jsx
- */
-
 import React, { useState } from 'react';
 import useAuthStore from '../../store/auth/authStore.js';
 import * as customerAuthService from '../../services/auth/customerAuth.service.js';

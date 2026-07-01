@@ -1,5 +1,5 @@
 /**
- * app/routes/AdminRoutes.jsx — Admin Route Definitions
+ * Admin Route Definitions
  *
  * All routes require role=admin authentication (via ProtectedRoute).
  * Wrapped in AdminLayout for admin sidebar navigation.

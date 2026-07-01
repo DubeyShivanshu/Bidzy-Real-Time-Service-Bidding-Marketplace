@@ -1,5 +1,5 @@
 /**
- * routes/disputes/dispute.routes.js — Dispute Routes
+ * Dispute Routes
  *
  * Routes:
  *  POST   /      — Raise a dispute on a booking (Customer or Provider)

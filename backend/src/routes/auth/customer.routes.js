@@ -1,5 +1,5 @@
 /**
- * routes/auth/customer.routes.js — Customer Authentication Routes
+ * Customer Authentication Routes
  *
  * Routes:
  *  POST   /register        — Local registration (name, email, phone, password)

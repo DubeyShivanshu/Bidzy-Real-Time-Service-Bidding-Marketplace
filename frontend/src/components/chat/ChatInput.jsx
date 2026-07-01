@@ -1,5 +1,5 @@
 /**
- * components/chat/ChatInput.jsx — Message Composition Input
+ * Message Composition Input
  *
  * Props: bookingId, userId, disabled
  * - Text input with send button

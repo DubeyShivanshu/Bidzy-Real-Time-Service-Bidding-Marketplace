@@ -1,5 +1,5 @@
 /**
- * store/jobs/jobStore.js — Jobs Zustand Store
+ * Jobs Zustand Store
  *
  * Responsibilities:
  *  - Store active jobs list, single job detail, filters

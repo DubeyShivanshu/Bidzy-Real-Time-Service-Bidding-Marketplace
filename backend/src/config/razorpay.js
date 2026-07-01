@@ -1,13 +1,11 @@
 /**
- * config/razorpay.js — Razorpay Instance Factory
- *
  * Responsibilities:
  *  - Create and export a configured Razorpay instance
  *  - Falls back to null (mock mode) if credentials are not provided in .env
  *  - Used by wallet.controller.js for order creation and payment verification
  *
  * Mock Mode:
- *  If RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET are empty/placeholder values,
+ * If RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET are empty/placeholder values, 
  *  razorpay will be null. Controllers must check for null before calling Razorpay APIs.
  */
 
@@ -22,9 +20,9 @@ let razorpay = null;
 
 if (isValidKey(keyId) && isValidKey(keySecret)) {
   razorpay = new Razorpay({ key_id: keyId, key_secret: keySecret });
-  console.log('✅ Razorpay initialized (Live Mode)');
+  console.log('Razorpay initialized (Live Mode)');
 } else {
-  console.warn('⚠️ Razorpay credentials not set — running in MOCK MODE. Payments will be simulated.');
+  console.warn('Razorpay credentials not set — running in MOCK MODE. Payments will be simulated.');
 }
 
 export const isMockMode = !razorpay;

@@ -1,6 +1,4 @@
 /**
- * hooks/useGeolocation.js — Browser Geolocation Hook
- *
  * Responsibilities:
  *  - Request browser geolocation permission
  *  - Return { lat, lng, error, loading, requestLocation }

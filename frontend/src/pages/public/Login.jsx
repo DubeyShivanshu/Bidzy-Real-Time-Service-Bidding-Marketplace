@@ -1,15 +1,13 @@
 /**
- * pages/public/Login.jsx — Unified Login Page
+ * Unified Login Page
  *
  * Responsibilities:
  *  - Role selector tabs: Customer | Provider | Admin
- *  - Customer: email/password + Google OAuth button
+ *  - Customer: email/password & Google OAuth button
  *  - Provider: email/password only
  *  - Admin: email/password only (separate section)
  *  - On success: navigate to role's dashboard
  *  - Link to Register page
- *
- * Design: Trove-inspired — clean card layout, Inter font, green accent
  */
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
@@ -64,7 +62,7 @@ const Login = () => {
     navigate(`/${loggedInUser.role}/dashboard`, { replace: true });
   };
 
-  // If we have a token in the URL, we are processing an OAuth login. Don't flash the login form.
+  // If we've a token in the URL, we are processing an OAuth login. Don't flash the login form.
   if (searchParams.get('token')) {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50">

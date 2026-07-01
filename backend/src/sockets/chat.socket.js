@@ -1,5 +1,5 @@
 /**
- * sockets/chat.socket.js — Real-Time Chat Socket Handler
+ * Real-Time Chat Socket Handler
  *
  * Responsibilities:
  *  - Handle all chat-related Socket.io events
@@ -10,13 +10,13 @@
  *  - Track online status of participants
  *
  * Events handled:
- *  Client → Server:
+ *  Client -> Server:
  *    chat:join    { bookingId }            — Join booking chat room + load history
  *    chat:leave   { bookingId }            — Leave booking chat room
  *    chat:message { bookingId, message }   — Send message (save + relay)
  *    chat:typing  { bookingId, isTyping }  — Typing indicator
  *
- *  Server → Client:
+ *  Server -> Client:
  *    chat:history  messages[]              — Sent on chat:join
  *    chat:message  fullMessageObject       — Broadcast to chat_<bookingId>
  *    chat:typing   { userId, isTyping }    — Broadcast to room except sender

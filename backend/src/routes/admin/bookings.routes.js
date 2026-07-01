@@ -1,9 +1,5 @@
 /**
- * routes/admin/bookings.routes.js — Admin Booking Management Routes
- *
- * Routes:
- *  GET    /       — List all bookings (paginated, filterable by status/date)
- *  GET    /:id    — Get full booking details with job, bid, payment, chat link
+ * Admin Booking Management Routes
  */
 
 import { Router } from 'express';

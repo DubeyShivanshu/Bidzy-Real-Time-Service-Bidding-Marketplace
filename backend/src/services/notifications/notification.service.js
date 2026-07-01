@@ -1,5 +1,5 @@
 /**
- * services/notifications/notification.service.js — Notification Service
+ * Notification Service
  *
  * Responsibilities:
  *  - sendSocketNotification(io, userId, event, data) — Emit targeted socket notification

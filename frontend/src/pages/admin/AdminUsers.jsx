@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminUsers.jsx — Admin User Management
+ * Admin User Management
  */
 
 import React, { useState, useEffect } from 'react';

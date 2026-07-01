@@ -1,5 +1,5 @@
 /**
- * routes/bookings/booking.routes.js — Booking Routes
+ * Booking Routes
  *
  * Routes:
  *  GET    /customer/my   — Get current customer's bookings

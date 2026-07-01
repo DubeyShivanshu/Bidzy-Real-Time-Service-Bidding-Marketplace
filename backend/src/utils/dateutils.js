@@ -1,5 +1,5 @@
 /**
- * utils/dateutils.js — Date Utility Functions
+ * Date Utility Functions
  *
  * Responsibilities:
  *  - getJobExpiryDate() — Return Date that is JOB_EXPIRY_MINUTES from now

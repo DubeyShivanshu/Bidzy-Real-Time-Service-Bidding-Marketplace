@@ -1,14 +1,3 @@
-/**
- * App.jsx — Root Application Component
- *
- * Responsibilities:
- *  - Set up BrowserRouter
- *  - Define top-level route structure
- *  - Route groups: PublicRoutes, CustomerRoutes, ProviderRoutes, AdminRoutes
- *  - Render Toaster for global notifications
- *  - Lazy-load route groups for code splitting
- */
-
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';

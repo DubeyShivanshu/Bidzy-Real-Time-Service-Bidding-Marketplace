@@ -1,5 +1,5 @@
 /**
- * controllers/admin/dashboard.controller.js — Admin Dashboard Controller
+ * Admin Dashboard Controller
  *
  * Responsibilities:
  *  - getDashboardMetrics: Aggregate real-time platform metrics

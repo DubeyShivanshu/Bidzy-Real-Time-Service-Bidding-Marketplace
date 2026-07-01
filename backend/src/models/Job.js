@@ -1,5 +1,5 @@
 /**
- * models/Job.js — Job Model
+ * Job Model
  *
  * Responsibilities:
  *  - Represents a service job posted by a customer
@@ -25,7 +25,7 @@ const jobSchema = new mongoose.Schema(
       required: true,
     },
     service: {
-      // Category: e.g. "Electrician", "Plumber", "Carpenter"
+      // Category
       type: String,
       required: true,
       trim: true,
@@ -41,7 +41,7 @@ const jobSchema = new mongoose.Schema(
       min: 0,
     },
     urgency: {
-      // e.g. "immediate", "today", "scheduled"
+      // "immediate", "today", "scheduled"
       type: String,
       enum: ['immediate', 'today', 'scheduled'],
       default: 'today',

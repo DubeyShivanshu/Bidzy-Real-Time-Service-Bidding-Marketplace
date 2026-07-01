@@ -1,5 +1,5 @@
 /**
- * controllers/admin/disputes.controller.js — Admin Dispute Controller
+ * Admin Dispute Controller
  *
  * Responsibilities:
  *  - getAllDisputes: Paginated list filterable by status
@@ -128,16 +128,13 @@ export const resolveDispute = async (req, res, next) => {
           }
         } catch (debitErr) {
           console.error("Failed to debit provider/admin wallets during post-completion refund:", debitErr);
-          // Allow the dispute resolution to proceed even if debit fails due to insufficient balance
         }
 
         booking.escrowStatus = 'refunded';
-        // Note: Keep booking status as 'completed' or change to 'cancelled'. Usually leave as completed but refunded.
         await booking.save();
       }
     } else {
-      // If no refund issued, maybe the escrow is released to provider?
-      // Leaving this up to the admin if they resolve without refund, we assume provider gets paid
+      // If no refund issued, the escrow is released to provider
       if (booking.escrowStatus === 'held') {
         booking.escrowStatus = 'released';
         booking.status = 'completed';

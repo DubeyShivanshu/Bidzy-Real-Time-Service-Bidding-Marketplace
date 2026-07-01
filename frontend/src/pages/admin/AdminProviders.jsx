@@ -1,5 +1,5 @@
 /**
- * pages/admin/AdminProviders.jsx — Admin Provider KYC Management
+ * Admin Provider KYC Management
  */
 
 import React, { useState, useEffect } from 'react';

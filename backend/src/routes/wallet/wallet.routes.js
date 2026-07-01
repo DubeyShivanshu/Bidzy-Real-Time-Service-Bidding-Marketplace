@@ -1,5 +1,5 @@
 /**
- * routes/wallet/wallet.routes.js — Wallet Routes
+ * Wallet Routes
  *
  * Routes:
  *  GET    /                    — Get current user's wallet balance

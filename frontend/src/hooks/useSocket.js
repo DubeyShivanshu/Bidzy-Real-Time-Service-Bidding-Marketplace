@@ -1,5 +1,5 @@
 /**
- * hooks/useSocket.js — Socket.io Connection Hook
+ * Socket.io Connection Hook
  *
  * Responsibilities:
  *  - Connect socket on mount (if authenticated)
@@ -24,7 +24,7 @@ const useSocket = () => {
       connectSocket(token);
     }
     return () => {
-      // Note: Don't disconnect on every unmount — managed by logout action
+      // Don't disconnect on every unmount — managed by logout action
     };
   }, [token]);
 
