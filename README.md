@@ -251,6 +251,9 @@ Admin credentials are automatically generated upon database connection if no adm
 * **Admin Email**: `admin@bidzy.com`
 * **Admin Password**: `Admin@12345`
 
+> [!WARNING]
+> **Production Security Note:** Because these default credentials are open source, you **MUST** log in and change this admin password immediately after deploying your application to a live production server (like Render or Vercel) to prevent unauthorized access.
+
 ---
 
 ## 🛡️ License
