@@ -73,7 +73,13 @@ export const useBids = (jobId) => {
     // Clear stale bids immediately before joining new room
     clearBids();
 
-    socket.emit('room:join', { jobId });
+    const joinRoom = () => socket.emit('room:join', { jobId });
+    
+    // Initial join
+    joinRoom();
+    
+    // Re-join if connection drops and reconnects (e.g. mobile screen off)
+    socket.on('connect', joinRoom);
 
     const handleNewBid = (newBid) => {
       if (newBid.jobId === jobId) {
@@ -85,6 +91,7 @@ export const useBids = (jobId) => {
 
     return () => {
       socket.emit('room:leave', { jobId });
+      socket.off('connect', joinRoom);
       socket.off('bid:new', handleNewBid);
       clearBids();
     };

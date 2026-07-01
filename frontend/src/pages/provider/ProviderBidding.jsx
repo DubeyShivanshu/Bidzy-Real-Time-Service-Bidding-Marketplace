@@ -33,6 +33,19 @@ export const ProviderBidding = () => {
         setLoading(false);
       }
     };
+  const fetchJobDetails = async () => {
+    try {
+      const response = await jobService.getJobById(id);
+      setJob(response.data.data);
+    } catch (err) {
+      console.error(err);
+      setError('Failed to load job details.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchJobDetails();
     fetchBids(); // Fetch competitor bids when the job loads
   }, [id]);
@@ -41,49 +54,52 @@ export const ProviderBidding = () => {
   useEffect(() => {
     if (!socket || !id) return;
 
-    const handleBidAccepted = ({ jobId, bidId, bookingId }) => {
-      if (jobId === id) {
-        const acceptedBid = bids.find((b) => b._id === bidId);
-        if (acceptedBid && acceptedBid.providerId === user?._id) {
-          toast.success('Congratulations! Your bid was accepted.', {
-            duration: 5000,
-          });
-          setTimeout(() => {
-            navigate(`/provider/bookings/${bookingId}`);
-          }, 2000);
+    const joinRoom = () => socket.emit('room:join', { jobId: id });
+    
+    // Initial join
+    joinRoom();
+    
+    // Re-join if connection drops
+    socket.on('connect', joinRoom);
+
+    const handleBidAccepted = ({ jobId: acceptedJobId, bidId, bookingId }) => {
+      if (acceptedJobId === id) {
+        const myBid = bids.find((b) => b.providerId === user?._id);
+        if (myBid && myBid._id === bidId) {
+          toast.success('Congratulations! Your bid was accepted!');
+          setTimeout(() => navigate(`/provider/bookings/${bookingId}`), 1500);
         } else {
-          toast.error('Another provider’s bid was accepted. Job closed.');
-          setTimeout(() => {
-            navigate('/provider/dashboard');
-          }, 2000);
+          toast.error('Another provider won this job. Bidding closed.');
+          fetchJobDetails(); // Refresh job status
         }
       }
     };
 
-    const handleJobCancelled = ({ jobId }) => {
-      if (jobId === id) {
-        toast.error('This job has been cancelled by the customer.');
-        navigate('/provider/dashboard');
+    const handleBidRejected = ({ bidId }) => {
+      const myBid = bids.find((b) => b.providerId === user?._id);
+      if (myBid && myBid._id === bidId) {
+        toast.error('Your bid was rejected by the customer.');
+        fetchBids(); // Refresh bid status
       }
     };
 
-    const handleBidRejected = ({ jobId, providerId }) => {
-      if (jobId === id && providerId === user?._id) {
-        toast.error('The customer declined your bid.');
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500);
+    const handleJobCancelled = ({ jobId: cancelledJobId }) => {
+      if (cancelledJobId === id) {
+        toast.error('The customer has cancelled this job.');
+        setTimeout(() => navigate('/provider/dashboard'), 2000);
       }
     };
 
     socket.on('bid:accepted', handleBidAccepted);
-    socket.on('job:cancelled', handleJobCancelled);
     socket.on('bid:rejected', handleBidRejected);
+    socket.on('job:cancelled', handleJobCancelled);
 
     return () => {
+      socket.emit('room:leave', { jobId: id });
+      socket.off('connect', joinRoom);
       socket.off('bid:accepted', handleBidAccepted);
-      socket.off('job:cancelled', handleJobCancelled);
       socket.off('bid:rejected', handleBidRejected);
+      socket.off('job:cancelled', handleJobCancelled);
     };
   }, [socket, id, bids, user, navigate]);
 

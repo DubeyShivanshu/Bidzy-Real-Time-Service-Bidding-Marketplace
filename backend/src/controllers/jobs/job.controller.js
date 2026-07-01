@@ -183,7 +183,7 @@ export const expireJob = async (req, res, next) => {
     try {
       const io = getIO();
       if (io) {
-        io.to(`job:${job._id}`).emit('job:expired', { jobId: job._id });
+        io.emit('job:expired', { jobId: job._id });
       }
     } catch (socketError) {
       console.warn('Real-time socket emit for expired job failed:', socketError.message);
@@ -219,7 +219,7 @@ export const cancelJob = async (req, res, next) => {
     try {
       const io = getIO();
       if (io) {
-        io.to(`job:${job._id}`).emit('job:cancelled', { jobId: job._id });
+        io.emit('job:cancelled', { jobId: job._id });
       }
     } catch (socketError) {
       console.warn('Real-time socket emit for cancelled job failed:', socketError.message);
