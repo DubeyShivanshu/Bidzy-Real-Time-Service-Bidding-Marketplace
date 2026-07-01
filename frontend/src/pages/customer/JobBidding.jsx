@@ -140,7 +140,7 @@ export const JobBidding = () => {
             )}
             {job.imageUrl && (() => {
               const isCloudinary = job.imageUrl.startsWith('http');
-              const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
+              const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5000';
               const cleanPath = job.imageUrl.replace(/\\/g, '/').replace(/^\/+/, '');
               const fullUrl = isCloudinary ? job.imageUrl : `${baseUrl}/${cleanPath}`;
               

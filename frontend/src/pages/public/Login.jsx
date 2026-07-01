@@ -75,11 +75,13 @@ const Login = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-50">
       <div className="sm:mx-auto sm:w-full sm:max-w-md flex flex-col items-center">
-        <div className="flex justify-center mb-6 items-center">
-          <div className="bg-green-600 text-white p-2 rounded-xl flex items-center justify-center shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m12 2 9 4.9V17L12 22l-9-4.9V7z"/><path d="m12 22 9-4.9"/><path d="M12 22v-9.5"/><path d="m12 12.5 9-4.9"/><path d="m12 12.5-9-4.9"/></svg>
+        <div className="flex justify-center mb-6 items-center gap-2">
+          <div className="h-12 w-12 bg-green-600 rounded-xl flex items-center justify-center text-white font-extrabold text-3xl shadow-lg shadow-green-200">
+            B
           </div>
-          <span className="ml-3 text-4xl font-black tracking-tight text-gray-900">Bidzy</span>
+          <span className="text-4xl font-black tracking-tight text-gray-900">
+            Bidzy<span className="text-green-600">.</span>
+          </span>
         </div>
       </div>
 

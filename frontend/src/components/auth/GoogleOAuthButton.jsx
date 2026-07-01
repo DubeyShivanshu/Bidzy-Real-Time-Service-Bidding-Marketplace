@@ -10,7 +10,7 @@ import React from 'react';
 
 export const GoogleOAuthButton = () => {
   const handleGoogleLogin = () => {
-    const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const backendUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
     window.location.href = `${backendUrl}/auth/customer/google`;
   };
 

@@ -242,7 +242,7 @@ const AdminProviders = () => {
                               {(() => {
                                 const url = selectedProvider.verification.aadhaarUrl;
                                 const isCloudinary = url.startsWith('http');
-                                const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
+                                const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5000';
                                 const fullUrl = isCloudinary ? url : `${baseUrl}/${url.replace(/\\/g, '/').replace(/^\/+/, '')}`;
                                 return <a href={fullUrl} target="_blank" rel="noreferrer" className="text-xs text-blue-600 hover:underline">View Document</a>;
                               })()}
@@ -259,7 +259,7 @@ const AdminProviders = () => {
                               {(() => {
                                 const url = selectedProvider.verification.panUrl;
                                 const isCloudinary = url.startsWith('http');
-                                const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
+                                const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5000';
                                 const fullUrl = isCloudinary ? url : `${baseUrl}/${url.replace(/\\/g, '/').replace(/^\/+/, '')}`;
                                 return <a href={fullUrl} target="_blank" rel="noreferrer" className="text-xs text-blue-600 hover:underline">View Document</a>;
                               })()}
