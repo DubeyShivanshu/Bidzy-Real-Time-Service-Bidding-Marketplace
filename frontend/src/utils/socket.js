@@ -23,7 +23,6 @@ export const connectSocket = (token) => {
   const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
   socket = io(socketUrl, {
     auth: { token },
-    transports: ['websocket'],
     autoConnect: true,
   });
   return socket;
